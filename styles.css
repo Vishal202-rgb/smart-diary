@@ -1,0 +1,271 @@
+/* Base */
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+section {
+    padding-top: 5rem;
+    /* 80px */
+    padding-bottom: 5rem;
+    /* 80px */
+    overflow: hidden;
+}
+
+@media (min-width: 640px) {
+    section {
+        padding-top: 7rem;
+        /* 112px */
+        padding-bottom: 7rem;
+        /* 112px */
+    }
+}
+
+/* Custom Nav Link */
+.nav-link {
+    position: relative;
+    color: #374151;
+    /* text-gray-700 */
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #2563EB;
+    /* hover:text-blue-600 */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #2563EB;
+    /* bg-blue-600 */
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active Nav Link Style */
+.nav-link.active {
+    color: #2563EB;
+    /* text-blue-600 */
+    font-weight: 600;
+    /* semibold */
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background-color: #2563EB;
+}
+
+/* Custom Mobile Nav Link */
+.nav-link-mobile {
+    display: block;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1.5rem;
+    /* 2xl */
+    line-height: 2rem;
+    font-weight: 500;
+    /* medium */
+    color: #1F2937;
+    /* text-gray-800 */
+    transition: color 0.3s;
+}
+
+.nav-link-mobile:hover {
+    color: #2563EB;
+    /* hover:text-blue-600 */
+}
+
+/* Custom Button Primary */
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background-color: #2563EB;
+    /* bg-blue-600 */
+    color: #ffffff;
+    font-weight: 600;
+    /* semibold */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* shadow-lg */
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1D4ED8;
+    /* hover:bg-blue-700 */
+    transform: translateY(-2px);
+}
+
+/* Custom Button Secondary */
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    color: #2563EB;
+    /* text-blue-600 */
+    font-weight: 600;
+    /* semibold */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* shadow-lg */
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #F9FAFB;
+    /* hover:bg-gray-50 */
+    transform: translateY(-2px);
+}
+
+/* Order Now Button */
+.btn-order-now {
+    padding: 0.6rem 1.25rem;
+    /* py-2 px-5 */
+    border-radius: 9999px;
+    background-color: #D5E8D4;
+    /* soft-green */
+    color: #004A2F;
+    /* dark-green */
+    font-weight: 600;
+    /* semibold */
+    transition: all 0.3s;
+}
+
+.btn-order-now:hover {
+    background-color: #004A2F;
+    /* dark-green */
+    color: #ffffff;
+    /* text-white */
+    transform: translateY(-2px);
+}
+
+/* Custom Section Heading */
+.section-heading {
+    font-size: 1.875rem;
+    /* 3xl */
+    line-height: 2.25rem;
+    font-weight: 700;
+    /* bold */
+    color: #111827;
+    /* text-gray-900 */
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+    .section-heading {
+        font-size: 2.25rem;
+        /* sm:text-4xl */
+        line-height: 2.5rem;
+    }
+}
+
+/* Custom Section Heading */
+.section-heading-lg {
+    font-size: 2.25rem;
+    /* 4xl */
+    line-height: 2.5rem;
+    font-weight: 700;
+    /* bold */
+    letter-spacing: -0.025em;
+    /* tracking-tight */
+    color: #111827;
+    /* text-gray-900 */
+}
+
+@media (min-width: 640px) {
+    .section-heading-lg {
+        font-size: 3rem;
+        /* sm:text-5xl */
+        line-height: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-heading-lg {
+        font-size: 3.75rem;
+        /* lg:text-6xl */
+    }
+}
+
+/* Custom Section Subheading */
+.section-subheading {
+    font-size: 1.125rem;
+    /* text-lg */
+    line-height: 1.75rem;
+    color: #4B5563;
+    /* text-gray-600 */
+    max-width: 42rem;
+    /* max-w-2xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Custom Hamburger Animation */
+.hamburger {
+    cursor: pointer;
+    z-index: 50;
+}
+
+.hamburger .line {
+    display: block;
+    width: 1.5rem;
+    /* w-6 */
+    height: 2px;
+    /* h-0.5 */
+    background-color: #111827;
+    /* bg-gray-900 */
+    transition: all 0.3s ease-in-out;
+    margin-top: 0.375rem;
+    /* space-y-1.5 */
+    margin-bottom: 0.375rem;
+}
+
+.hamburger.active .line-1 {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .line-2 {
+    opacity: 0;
+}
+
+.hamburger.active .line-3 {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Scroll-reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: all 1s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* New Hero Section Styles */
+#hero-top {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+#hero-container:hover #hero-divider {
+    opacity: 1;
+}
+
+#home {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@media (min-width: 640px) {
+    #home {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
